@@ -13,5 +13,5 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-style: util.$font;
+  font-family: util.$font-local;
 }
