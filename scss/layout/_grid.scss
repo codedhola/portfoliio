@@ -1,5 +1,29 @@
 .header {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2%;
+  // gap: 2%;
+
+  &__parent__nav {
+    text-align: right;
+
+    & ul {
+      @media (min-width: 900px) {
+        background-color: blue;
+        display: flex;
+        gap: 15px;
+        padding: 4px;
+      }
+    }
+
+    & ul li {
+      margin-bottom: 60px;
+      padding: 25px 0;
+    }
+
+    @media (min-width: 900px) {
+      background-color: blue;
+    }
+  }
 }
