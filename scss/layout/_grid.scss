@@ -1,15 +1,27 @@
+@use "../utils/breakpoint.scss" as U;
+
+.grid {
+  display: grid;
+  max-width: 1000px;
+}
 .header {
   width: 90%;
-  margin: 0 auto;
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   // gap: 2%;
+
+  & p,
+  h3 {
+    text-align: center;
+    margin-left: 2.5em;
+  }
 
   &__parent__nav {
     text-align: right;
 
     & ul {
-      @media (min-width: 900px) {
+      @include U.breakpoint(medium) {
         background-color: blue;
         display: flex;
         gap: 15px;
@@ -18,12 +30,8 @@
     }
 
     & ul li {
-      margin-bottom: 60px;
-      padding: 25px 0;
-    }
-
-    @media (min-width: 900px) {
-      background-color: blue;
+      margin-bottom: 75px;
+      padding: 2px 0;
     }
   }
 }
