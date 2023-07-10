@@ -1,14 +1,15 @@
-//
+@use "function" as F;
+
 $breakpoint-up: (
-  "medium": 43.75em,
-  "large": 56.25em,
-  "xlarge": 90em,
+  "medium": F.em(40.75),
+  "large": F.em(56.25),
+  "xlarge": F.em(90),
 );
 
 $breakpoint-down: (
-  "small": 43.7485em,
-  "medium": 56.25em,
-  "large": 89.99875em,
+  "small": F.em(40.7485),
+  "medium": F.em(56.25),
+  "large": F.em(89.99875),
 );
 
 @mixin breakpoint($size) {
@@ -18,7 +19,7 @@ $breakpoint-down: (
 }
 
 @mixin breakpoint-down($size) {
-  @media (min-width: map-get($breakpoint-down, $size)) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
     @content;
   }
 }

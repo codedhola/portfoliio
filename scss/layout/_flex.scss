@@ -11,8 +11,8 @@
 
   &__parent__nav {
     & ul {
-      @include U.breakpoint(medium) {
-        // background-color: red;
+      @media (min-width: 900px) {
+        background-color: blue;
         display: flex;
         gap: 15px;
         padding: 4px;
